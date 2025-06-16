@@ -1,0 +1,124 @@
+.featured-projects {
+  background-color: var(--color-neutral-100);
+}
+
+.projects-wrapper {
+  margin-bottom: var(--space-2xl);
+}
+
+.project-showcase {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.project-images {
+  display: block;
+  width: 100%;
+}
+
+.project-image-container {
+  position: relative;
+  height: 300px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.project-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-details {
+  padding: var(--space-lg);
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.project-type {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-800);
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.project-title {
+  margin-bottom: var(--space-xs);
+  font-size: 1.5rem;
+}
+
+.project-location {
+  color: var(--color-neutral-600);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-md);
+}
+
+.project-description {
+  margin-bottom: var(--space-lg);
+}
+
+.project-navigation {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  padding-bottom: var(--space-sm);
+}
+
+.project-nav-item {
+  flex: 1;
+  min-width: 200px;
+  padding: var(--space-md);
+  background-color: white;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-neutral-200);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-nav-item.active {
+  border-color: var(--color-primary-800);
+  box-shadow: var(--shadow-md);
+}
+
+.project-nav-title {
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  color: var(--color-neutral-900);
+}
+
+.project-nav-type {
+  font-size: 0.8rem;
+  color: var(--color-neutral-600);
+}
+
+@media (max-width: 992px) {
+  .project-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-navigation {
+    flex-direction: column;
+  }
+
+  .project-nav-item {
+    min-width: auto;
+  }
+}
