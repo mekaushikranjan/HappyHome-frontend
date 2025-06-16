@@ -17,7 +17,7 @@ export default defineConfig({
     allowedHosts: ['happyhome-frontend.onrender.com'],
     proxy: {
       '/api': {
-        target: 'https://happyhome-backend-9aw9.onrender.com/',
+        target: 'https://happyhome-backend-9aw9.onrender.com',
         changeOrigin: true,
         secure: false
       }
